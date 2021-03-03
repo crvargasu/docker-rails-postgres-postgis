@@ -3,8 +3,9 @@ default: &default
   pool: 5
   timeout: 5000
   username: postgres
-  password: <%= ENV['PGPASSWORD'] %>
-  host: db
+  password: mypass
+  host: localhost
+  # host: db
 test:
   <<: *default
   database: dockerized-rails_test
