@@ -76,19 +76,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_021829) do
     t.float "prom_soc8b"
   end
 
-  create_table "metropolitana", id: :serial, force: :cascade do |t|
-    t.geometry "geom", limit: {:srid=>4326, :type=>"st_polygon"}
-    t.integer "CIR_SENA"
-    t.integer "COD_COMUNA"
-    t.integer "DIS_ELEC"
-    t.string "name"
-    t.string "NOM_PROV"
-    t.string "NOM_REG"
-    t.float "SHAPE_Area"
-    t.float "SHAPE_LENG"
-    t.float "SHAPE_Le_1"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.datetime "created_at", precision: 6, null: false
